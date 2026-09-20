@@ -1,0 +1,15 @@
+global using Bank.Statements.Application.Commands;
+global using Bank.Statements.Application.DTOs;
+global using Bank.Statements.Application.Interfaces;
+global using Bank.Statements.Application.Queries;
+global using Bank.Statements.Domain.Entities;
+global using Bank.Statements.Domain.Enums;
+global using Bank.Statements.Presentation.Requests;
+global using Bank.Statements.Presentation.Responses;
+global using FluentValidation;
+global using MediatR;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Routing;
+global using Microsoft.Extensions.DependencyInjection;

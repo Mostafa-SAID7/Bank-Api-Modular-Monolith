@@ -1,0 +1,14 @@
+global using Bank.Statements.Application.Commands;
+global using Bank.Statements.Application.DTOs;
+global using Bank.Statements.Application.Interfaces;
+global using Bank.Statements.Application.Queries;
+global using Bank.Statements.Domain.Entities;
+global using Bank.Statements.Domain.Enums;
+global using Bank.Statements.Infrastructure;
+global using Bank.Statements.Infrastructure.Data;
+global using Xunit;
+global using FluentAssertions;
+global using Moq;
+global using MediatR;
+global using Microsoft.EntityFrameworkCore;
+global using Testcontainers.PostgreSql;
