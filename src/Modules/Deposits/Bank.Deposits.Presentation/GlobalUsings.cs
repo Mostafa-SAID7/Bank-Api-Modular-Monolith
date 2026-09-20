@@ -1,0 +1,12 @@
+global using Bank.Deposits.Application;
+global using Bank.Deposits.Application.Interfaces;
+global using Bank.Deposits.Domain.Entities;
+global using Bank.Deposits.Domain.Enums;
+global using Bank.Deposits.Infrastructure;
+global using Bank.BuildingBlocks.Application.Modules;
+global using FluentValidation;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Routing;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;

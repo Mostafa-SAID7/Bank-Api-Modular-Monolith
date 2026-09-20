@@ -1,0 +1,12 @@
+global using Bank.Deposits.Application;
+global using Bank.Deposits.Application.Commands;
+global using Bank.Deposits.Application.Queries;
+global using Bank.Deposits.Domain.Entities;
+global using Bank.Deposits.Domain.Enums;
+global using Bank.Deposits.Infrastructure;
+global using Bank.Deposits.Infrastructure.Data;
+global using Bank.Deposits.Presentation;
+global using FluentAssertions;
+global using MediatR;
+global using Microsoft.EntityFrameworkCore;
+global using Xunit;
