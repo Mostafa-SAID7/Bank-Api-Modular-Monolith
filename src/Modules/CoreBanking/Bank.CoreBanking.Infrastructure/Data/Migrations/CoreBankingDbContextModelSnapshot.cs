@@ -126,6 +126,9 @@ namespace Bank.CoreBanking.Infrastructure.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("numeric(18,2)");
+
                     b.Property<DateTime?>("CompletedAtUtc")
                         .HasColumnType("timestamp with time zone");
 
@@ -138,6 +141,7 @@ namespace Bank.CoreBanking.Infrastructure.Data.Migrations
                         .HasColumnType("character varying(3)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");
 
@@ -148,18 +152,22 @@ namespace Bank.CoreBanking.Infrastructure.Data.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("IdempotencyKey")
+                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
-                    b.Property<DateTime>("InitiatedAtUtc")
+                    b.Property<DateTime?>("PostedAtUtc")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("numeric(18,2)");
 
                     b.Property<string>("Reference")
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
+
+                    b.Property<int>("RetryCount")
+                        .HasColumnType("integer");
+
+                    b.Property<byte[]>("RowVersion")
+                        .HasColumnType("bytea");
 
                     b.Property<int>("Status")
                         .HasColumnType("integer");
@@ -169,9 +177,6 @@ namespace Bank.CoreBanking.Infrastructure.Data.Migrations
 
                     b.Property<int>("Type")
                         .HasColumnType("integer");
-
-                    b.Property<DateTime?>("UpdatedAtUtc")
-                        .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
 

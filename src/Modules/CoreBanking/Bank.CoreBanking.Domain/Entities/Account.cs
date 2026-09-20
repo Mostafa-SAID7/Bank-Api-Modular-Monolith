@@ -13,11 +13,12 @@ public class Account
     public string AccountHolderName { get; set; } = string.Empty;
     public Guid CustomerId { get; set; }
     public decimal Balance { get; set; }
+    public string Currency { get; set; } = "USD"; // ISO 4217 currency code
     
     // Account lifecycle
     public AccountStatus Status { get; set; } = AccountStatus.Active;
     public AccountType Type { get; set; } = AccountType.Checking;
-    public DateTime OpenedDate { get; set; } = DateTime.UtcNow;
+    public DateTime OpenedAtUtc { get; set; } = DateTime.UtcNow;
     public DateTime? ClosedDate { get; set; }
     public string? ClosureReason { get; set; }
     
@@ -53,6 +54,7 @@ public class Account
         string accountNumber,
         string accountHolderName,
         Guid customerId,
+        string currency = "USD",
         AccountType type = AccountType.Checking,
         decimal initialBalance = 0)
     {
@@ -62,10 +64,11 @@ public class Account
             AccountNumber = accountNumber,
             AccountHolderName = accountHolderName,
             CustomerId = customerId,
+            Currency = currency,
             Type = type,
             Balance = initialBalance,
             Status = AccountStatus.Active,
-            OpenedDate = DateTime.UtcNow,
+            OpenedAtUtc = DateTime.UtcNow,
             LastActivityDate = DateTime.UtcNow,
             CreatedAtUtc = DateTime.UtcNow
         };

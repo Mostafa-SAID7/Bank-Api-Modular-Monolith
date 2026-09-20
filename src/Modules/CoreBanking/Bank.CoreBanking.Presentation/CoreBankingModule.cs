@@ -26,6 +26,9 @@ public sealed class CoreBankingModule : IModule
             configuration.GetConnectionString("DefaultConnection")
         );
 
+        // Register presentation layer services (validators)
+        services.AddCoreBankingPresentationServices();
+
         // DbContext is already registered in infrastructure, just ensure it's available
         // Apply migrations if needed (deferred to startup or manual migration)
     }

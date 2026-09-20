@@ -13,7 +13,7 @@ public sealed record TransactionResponse(
     int Type,
     string? Reference,
     string? Description,
-    DateTime InitiatedAtUtc,
+    DateTime CreatedAtUtc,
     DateTime? CompletedAtUtc,
     string? FailureReason
 );
