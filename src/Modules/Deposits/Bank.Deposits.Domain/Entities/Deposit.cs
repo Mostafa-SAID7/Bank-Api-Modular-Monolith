@@ -6,9 +6,10 @@ namespace Bank.Deposits.Domain.Entities;
 /// Deposit aggregate root - Represents a customer's deposit account
 /// Manages deposit lifecycle: opening, deposits, withdrawals, interest accrual, maturity, closure
 /// </summary>
-public class Deposit : AggregateRoot
+public class Deposit
 {
-    /// <summary>Deposit account number (unique, system-generated)</summary>
+    /// <summary>Aggregate root Id</summary>
+    public Guid Id { get; private set; }
     public string AccountNumber { get; private set; } = null!;
 
     /// <summary>Customer ID who owns this deposit</summary>
@@ -65,7 +66,14 @@ public class Deposit : AggregateRoot
     /// <summary>Latest update timestamp</summary>
     public DateTime UpdatedAtUtc { get; private set; }
 
-    // Domain events will be raised through DomainEvents collection
+    // Domain events
+    private readonly List<object> _domainEvents = new();
+    public IReadOnlyList<object> DomainEvents => _domainEvents.AsReadOnly();
+
+    private void AddDomainEvent(object domainEvent)
+    {
+        _domainEvents.Add(domainEvent);
+    }
 
     /// <summary>
     /// Factory method to create a new deposit account
@@ -116,9 +124,9 @@ public class Deposit : AggregateRoot
     }
 
     /// <summary>
-    /// Deposit funds into the account
+    /// Add funds into the account
     /// </summary>
-    public void Deposit(decimal amount, string description)
+    public void AddFunds(decimal amount, string description)
     {
         if (Status != DepositStatus.Active)
             throw new InvalidOperationException($"Cannot deposit into an account with status {Status}");

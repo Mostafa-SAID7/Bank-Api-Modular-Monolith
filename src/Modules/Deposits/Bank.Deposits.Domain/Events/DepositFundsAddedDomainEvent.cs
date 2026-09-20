@@ -9,4 +9,4 @@ public sealed record DepositFundsAddedDomainEvent(
     string AccountNumber,
     decimal Amount,
     decimal NewBalance,
-    DateTime OccurredAtUtc) : DomainEvent;
+    DateTime OccurredAtUtc) : DomainEvent(DepositId, "DepositFundsAdded");

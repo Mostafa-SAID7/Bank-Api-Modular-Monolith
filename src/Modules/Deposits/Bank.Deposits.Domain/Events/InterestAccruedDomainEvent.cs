@@ -9,4 +9,4 @@ public sealed record InterestAccruedDomainEvent(
     string AccountNumber,
     decimal InterestAmount,
     decimal TotalAccruedInterest,
-    DateTime OccurredAtUtc) : DomainEvent;
+    DateTime OccurredAtUtc) : DomainEvent(DepositId, "InterestAccrued");

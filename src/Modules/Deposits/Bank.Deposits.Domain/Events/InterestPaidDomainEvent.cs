@@ -9,4 +9,4 @@ public sealed record InterestPaidDomainEvent(
     string AccountNumber,
     decimal InterestAmount,
     decimal NewBalance,
-    DateTime OccurredAtUtc) : DomainEvent;
+    DateTime OccurredAtUtc) : DomainEvent(DepositId, "InterestPaid");

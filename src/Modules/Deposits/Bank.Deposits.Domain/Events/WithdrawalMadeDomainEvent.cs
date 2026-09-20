@@ -10,4 +10,4 @@ public sealed record WithdrawalMadeDomainEvent(
     decimal Amount,
     decimal NewBalance,
     string Reason,
-    DateTime OccurredAtUtc) : DomainEvent;
+    DateTime OccurredAtUtc) : DomainEvent(DepositId, "WithdrawalMade");

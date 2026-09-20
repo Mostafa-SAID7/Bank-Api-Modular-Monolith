@@ -8,4 +8,4 @@ public sealed record DepositMaturedDomainEvent(
     Guid CustomerId,
     string AccountNumber,
     decimal FinalBalance,
-    DateTime OccurredAtUtc) : DomainEvent;
+    DateTime OccurredAtUtc) : DomainEvent(DepositId, "DepositMatured");

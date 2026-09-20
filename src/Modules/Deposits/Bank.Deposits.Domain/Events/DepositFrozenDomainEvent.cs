@@ -8,4 +8,4 @@ public sealed record DepositFrozenDomainEvent(
     Guid CustomerId,
     string AccountNumber,
     string Reason,
-    DateTime OccurredAtUtc) : DomainEvent;
+    DateTime OccurredAtUtc) : DomainEvent(DepositId, "DepositFrozen");

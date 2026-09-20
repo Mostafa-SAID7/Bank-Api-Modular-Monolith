@@ -25,7 +25,7 @@ public class DepositFundsCommandHandler : ICommandHandler<DepositFundsCommand>
                 return Result.Failure(new Error("404", "Deposit not found"));
 
             // Execute domain operation
-            deposit.Deposit(command.Amount, command.Description);
+            deposit.AddFunds(command.Amount, command.Description);
 
             // Persist changes
             await _depositRepository.UpdateAsync(deposit, cancellationToken);

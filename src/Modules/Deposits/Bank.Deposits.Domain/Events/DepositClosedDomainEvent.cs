@@ -10,4 +10,4 @@ public sealed record DepositClosedDomainEvent(
     decimal FinalBalance,
     decimal TotalInterestEarned,
     string Reason,
-    DateTime OccurredAtUtc) : DomainEvent;
+    DateTime OccurredAtUtc) : DomainEvent(DepositId, "DepositClosed");

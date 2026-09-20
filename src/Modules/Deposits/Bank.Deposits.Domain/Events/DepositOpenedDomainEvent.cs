@@ -8,4 +8,4 @@ public sealed record DepositOpenedDomainEvent(
     Guid CustomerId,
     string AccountNumber,
     decimal InitialDeposit,
-    DateTime OccurredAtUtc) : DomainEvent;
+    DateTime OccurredAtUtc) : DomainEvent(DepositId, "DepositOpened");

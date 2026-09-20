@@ -7,4 +7,4 @@ public sealed record DepositUnfrozenDomainEvent(
     Guid DepositId,
     Guid CustomerId,
     string AccountNumber,
-    DateTime OccurredAtUtc) : DomainEvent;
+    DateTime OccurredAtUtc) : DomainEvent(DepositId, "DepositUnfrozen");
