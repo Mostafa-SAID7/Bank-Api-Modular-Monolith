@@ -1,6 +1,7 @@
 namespace Bank.Audit.Presentation;
 
 using Bank.Audit.Presentation.Endpoints;
+using Bank.Audit.Application;
 using Bank.Audit.Infrastructure;
 
 /// <summary>
@@ -16,6 +17,12 @@ public sealed class AuditModule : IModule
     {
         // Register infrastructure (DbContext, repositories, services)
         services.AddAuditInfrastructure(configuration);
+
+        // Register application layer (MediatR handlers)
+        services.AddAuditApplicationServices();
+
+        // Register presentation layer services (validators)
+        services.AddAuditPresentationServices();
     }
 
     public void MapEndpoints(IEndpointRouteBuilder app)

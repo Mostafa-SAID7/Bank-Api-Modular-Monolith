@@ -2,8 +2,16 @@ using Bank.Api.Extensions.Configuration;
 using Bank.Api.Extensions.DependencyInjection;
 using Bank.Api.Extensions.Infrastructure;
 using Bank.BuildingBlocks.Application.Modules;
-using Bank.Notifications.Infrastructure;
+using Bank.CoreBanking.Presentation;
+using Bank.Identity.Presentation;
 using Bank.Payments.Infrastructure;
+using Bank.Loans.Presentation;
+using Bank.Cards.Presentation;
+using Bank.Deposits.Presentation;
+using Bank.Statements.Presentation;
+using Bank.Audit.Presentation;
+using Bank.Notifications.Infrastructure;
+using Bank.Notifications.Presentation;
 
 namespace Bank.Api.Extensions;
 
@@ -40,12 +48,19 @@ public static class ServiceCollectionExtensions
         services.AddApiDocumentationServices();
         services.AddCorsServices(configuration);
 
-        // Module composition. Business features remain on their existing
-        // routes until each pilot is moved into its module boundary.
+        // Module composition: Register all modules to enable service injection.
+        // Each module owns its infrastructure, application, and presentation layers.
         services.AddModules(
             configuration,
-            new NotificationsModule(),
-            new PaymentsModule());
+            new CoreBankingModule(),
+            new IdentityModule(),
+            new PaymentsModule(),
+            new LoansModule(),
+            new CardsModule(),
+            new DepositsModule(),
+            new StatementsModule(),
+            new AuditModule(),
+            new NotificationsModule());
 
         return services;
     }

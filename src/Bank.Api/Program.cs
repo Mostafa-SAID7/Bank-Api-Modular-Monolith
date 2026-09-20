@@ -5,9 +5,12 @@ using Bank.Api.Extensions.DependencyInjection;
 using Bank.Api.Extensions.Infrastructure;
 using Bank.Api.Extensions.Middleware;
 using Bank.BuildingBlocks.Application.Modules;
-//using Bank.CoreBanking.Presentation;
-//using Bank.Deposits.Presentation;
-//using Bank.Identity.Presentation;
+using Bank.CoreBanking.Presentation;
+using Bank.Identity.Presentation;
+using Bank.Deposits.Presentation;
+using Bank.Cards.Presentation;
+using Bank.Statements.Presentation;
+using Bank.Audit.Presentation;
 using Bank.Loans.Presentation;
 using Bank.Notifications.Infrastructure;
 using Bank.Notifications.Presentation;
@@ -105,9 +108,18 @@ app.ConfigureSecurityMiddleware();
 app.UseRouting();
 
 app.MapControllers();
-// Temporarily comment out broken modules; Loans works, others have pre-existing issues
-app.MapModules(new NotificationsModule(), new PaymentsModule(), new LoansModule());
-// app.MapModules(new IdentityModule(), new CoreBankingModule(), new DepositsModule());
+// Map all available modules to the endpoint route builder
+app.MapModules(
+    new CoreBankingModule(),
+    new IdentityModule(),
+    new PaymentsModule(),
+    new LoansModule(),
+    new CardsModule(),
+    new DepositsModule(),
+    new StatementsModule(),
+    new AuditModule(),
+    new NotificationsModule());
+
 
 app.Run();
 

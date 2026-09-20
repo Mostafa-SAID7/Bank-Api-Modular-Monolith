@@ -34,12 +34,15 @@ public sealed class IdentityModule : IModule
             jwtAudience
         );
 
-        // Register command handlers
+        // Register application layer services (MediatR handlers, pipelines)
+        services.AddIdentityApplicationServices();
+
+        // Register command handlers (legacy - can be removed once MediatR handlers are wired)
         services.AddScoped<RegisterUserCommandHandler>();
         services.AddScoped<LoginUserCommandHandler>();
         services.AddScoped<LogoutUserCommandHandler>();
 
-        // Register query handlers
+        // Register query handlers (legacy - can be removed once MediatR handlers are wired)
         services.AddScoped<GetUserByIdQueryHandler>();
         services.AddScoped<GetUserSessionsQueryHandler>();
     }

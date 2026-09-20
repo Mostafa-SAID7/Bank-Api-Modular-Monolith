@@ -26,6 +26,9 @@ public sealed class CoreBankingModule : IModule
             configuration.GetConnectionString("DefaultConnection")
         );
 
+        // Register application layer services (MediatR handlers, pipelines)
+        services.AddCoreBankingApplicationServices();
+
         // Register presentation layer services (validators)
         services.AddCoreBankingPresentationServices();
 

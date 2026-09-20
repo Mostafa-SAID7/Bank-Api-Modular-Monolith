@@ -18,6 +18,9 @@ public sealed class DepositsModule : IModule
             configuration.GetConnectionString("DefaultConnection")
         );
 
+        // Register application layer services (MediatR handlers, pipelines)
+        services.AddDepositsApplicationServices();
+
         // Register presentation layer services (validators)
         services.AddDepositsPresentationServices();
     }
