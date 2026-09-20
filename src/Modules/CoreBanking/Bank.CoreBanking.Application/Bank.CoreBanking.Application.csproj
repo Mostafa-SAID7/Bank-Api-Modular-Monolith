@@ -8,6 +8,7 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <ProjectReference Include="..\Bank.CoreBanking.Domain\Bank.CoreBanking.Domain.csproj" />
     <ProjectReference Include="..\..\..\Bank.Contracts\Bank.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Bank.BuildingBlocks.Application\Bank.BuildingBlocks.Application.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" Version="14.1.0" />

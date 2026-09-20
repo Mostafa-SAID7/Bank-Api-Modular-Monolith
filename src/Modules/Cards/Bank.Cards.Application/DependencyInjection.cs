@@ -1,4 +1,3 @@
-using Bank.BuildingBlocks.Application.Behaviors;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,8 +15,6 @@ public static class DependencyInjection
         services.AddMediatR(cfg =>
         {
             cfg.RegisterServicesFromAssemblyContaining<CardsApplicationMarker>();
-            cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
-            cfg.AddBehavior(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
         });
 
         return services;

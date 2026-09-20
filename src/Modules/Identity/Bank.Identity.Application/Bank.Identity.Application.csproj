@@ -6,10 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <ProjectReference Include="..\Bank.Identity.Domain\Bank.Identity.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Bank.Contracts\Bank.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Bank.BuildingBlocks.Application\Bank.BuildingBlocks.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,6 @@
 using FluentValidation;
 using Bank.CoreBanking.Presentation.Dtos;
+using Microsoft.AspNetCore.Http;
 
 namespace Bank.CoreBanking.Presentation.Extensions;
 

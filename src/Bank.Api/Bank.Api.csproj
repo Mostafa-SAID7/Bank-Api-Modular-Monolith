@@ -26,7 +26,15 @@
     <ProjectReference Include="..\Bank.Infrastructure\Bank.Infrastructure.csproj" />
     <ProjectReference Include="..\BuildingBlocks\Bank.BuildingBlocks.Application\Bank.BuildingBlocks.Application.csproj" />
     <ProjectReference Include="..\Bank.Contracts\Bank.Contracts.csproj" />
+    <ProjectReference Include="..\Modules\CoreBanking\Bank.CoreBanking.Presentation\Bank.CoreBanking.Presentation.csproj" />
+    <ProjectReference Include="..\Modules\Identity\Bank.Identity.Presentation\Bank.Identity.Presentation.csproj" />
     <ProjectReference Include="..\Modules\Payments\Bank.Payments.Infrastructure\Bank.Payments.Infrastructure.csproj" />
+    <ProjectReference Include="..\Modules\Payments\Bank.Payments.Presentation\Bank.Payments.Presentation.csproj" />
+    <ProjectReference Include="..\Modules\Loans\Bank.Loans.Presentation\Bank.Loans.Presentation.csproj" />
+    <ProjectReference Include="..\Modules\Cards\Bank.Cards.Presentation\Bank.Cards.Presentation.csproj" />
+    <ProjectReference Include="..\Modules\Deposits\Bank.Deposits.Presentation\Bank.Deposits.Presentation.csproj" />
+    <ProjectReference Include="..\Modules\Statements\Bank.Statements.Presentation\Bank.Statements.Presentation.csproj" />
+    <ProjectReference Include="..\Modules\Audit\Bank.Audit.Presentation\Bank.Audit.Presentation.csproj" />
     <ProjectReference Include="..\Modules\Notifications\Bank.Notifications.Infrastructure\Bank.Notifications.Infrastructure.csproj" />
     <ProjectReference Include="..\Modules\Notifications\Bank.Notifications.Presentation\Bank.Notifications.Presentation.csproj" />
   </ItemGroup>
