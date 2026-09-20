@@ -1,0 +1,9 @@
+global using Bank.Cards.Application.Commands;
+global using Bank.Cards.Application.DTOs;
+global using Bank.Cards.Application.Handlers;
+global using Bank.Cards.Application.Interfaces;
+global using Bank.Cards.Application.Queries;
+global using Bank.Cards.Domain.Entities;
+global using Bank.Cards.Domain.Enums;
+global using Bank.Cards.Domain.Events;
+global using MediatR;

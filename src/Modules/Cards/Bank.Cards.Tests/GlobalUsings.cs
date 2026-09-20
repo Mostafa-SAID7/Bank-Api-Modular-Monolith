@@ -1,0 +1,13 @@
+global using Bank.Cards.Application.Commands;
+global using Bank.Cards.Application.Interfaces;
+global using Bank.Cards.Application.Queries;
+global using Bank.Cards.Domain.Entities;
+global using Bank.Cards.Domain.Enums;
+global using Bank.Cards.Infrastructure;
+global using Bank.Cards.Infrastructure.Data;
+global using Bank.Cards.Infrastructure.Data.Repositories;
+global using FluentAssertions;
+global using MediatR;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.DependencyInjection;
+global using Xunit;
