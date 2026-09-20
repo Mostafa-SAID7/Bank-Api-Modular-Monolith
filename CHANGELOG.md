@@ -1,5 +1,25 @@
 # Changelog
 
+## [1.1.0](https://github.com/Mostafa-SAID7/Bank-Api-Modular-Monolith/compare/v1.0.0...v1.1.0) (2026-09-20)
+
+
+### Features
+
+* **audit:** extract Audit module with DDD+CQRS implementation, 5 entities, 8 commands, 6 queries, 18+ E2E tests ([d085e1d](https://github.com/Mostafa-SAID7/Bank-Api-Modular-Monolith/commit/d085e1d09478b9edd494e12fdf239f70a066a326))
+* **deposits:** Complete Phase 7 FixedDeposit module extraction with comprehensive testing ([1537856](https://github.com/Mostafa-SAID7/Bank-Api-Modular-Monolith/commit/15378565c3d0db1231dedf6eab354a84a5390051))
+* **loans:** Complete Phase 6 Loans module extraction with full DDD+CQRS architecture ([49a4dba](https://github.com/Mostafa-SAID7/Bank-Api-Modular-Monolith/commit/49a4dba7c5651f302512a13d6e3798c46cd99948))
+* **modularity:** complete payments module with contract integration and event publishing ([cf74fac](https://github.com/Mostafa-SAID7/Bank-Api-Modular-Monolith/commit/cf74facce5b9c6e7167fb02561d5de2ffa520380))
+* phase 11 step 1 - fix bank.host module integration for all 9 modules ([7ffe138](https://github.com/Mostafa-SAID7/Bank-Api-Modular-Monolith/commit/7ffe138a7e539f86e77d09d17fce37853ab23374))
+* **statements:** extract Statements module with DDD+CQRS implementation ([2c05d1d](https://github.com/Mostafa-SAID7/Bank-Api-Modular-Monolith/commit/2c05d1df03edcafc657e5d7575b9bfad3d6cca88))
+
+
+### Bug Fixes
+
+* **ci:** restore host and correct notifications migration ([3b234d2](https://github.com/Mostafa-SAID7/Bank-Api-Modular-Monolith/commit/3b234d2998c51bc9b2ce19a20a8e923f30240a17))
+* Resolve Deposits module build errors and partial solution fixes ([ebc3392](https://github.com/Mostafa-SAID7/Bank-Api-Modular-Monolith/commit/ebc3392a2fc9655a39e1f3dca77208e377a5c41f))
+* resolve phase 11 compilation errors - remove non-existent behaviors ([c3639be](https://github.com/Mostafa-SAID7/Bank-Api-Modular-Monolith/commit/c3639be902e977a68cbab15191bb37ab2b67aa96))
+* **security:** restore all projects before audit ([97d94e3](https://github.com/Mostafa-SAID7/Bank-Api-Modular-Monolith/commit/97d94e3f214fbc2a33e3f296a95775513215c537))
+
 ## 1.0.0 (2026-09-19)
 
 
