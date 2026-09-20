@@ -1,0 +1,15 @@
+global using Bank.Loans.Domain;
+global using Bank.Loans.Domain.Entities;
+global using Bank.Loans.Domain.Enums;
+global using Bank.Loans.Application.Commands;
+global using Bank.Loans.Application.Queries;
+global using Bank.Loans.Application.DTOs;
+global using Bank.Loans.Application.Interfaces;
+global using Bank.Loans.Infrastructure.Data;
+global using Bank.Loans.Infrastructure.Data.Repositories;
+global using Bank.Loans.Infrastructure.Services;
+global using Microsoft.EntityFrameworkCore;
+global using MediatR;
+global using FluentAssertions;
+global using NSubstitute;
+global using Xunit;

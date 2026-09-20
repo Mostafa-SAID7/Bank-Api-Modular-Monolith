@@ -1,0 +1,9 @@
+global using Bank.Loans.Application.Interfaces;
+global using Bank.Loans.Domain.Entities;
+global using Bank.Loans.Domain.Enums;
+global using Bank.Loans.Infrastructure.Data;
+global using Bank.Loans.Infrastructure.Data.Repositories;
+global using Bank.Loans.Infrastructure.Services;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Design;
+global using Microsoft.Extensions.DependencyInjection;

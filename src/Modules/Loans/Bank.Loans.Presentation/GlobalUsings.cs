@@ -1,0 +1,16 @@
+global using Bank.Loans.Application.Commands;
+global using Bank.Loans.Application.DTOs;
+global using Bank.Loans.Application.Interfaces;
+global using Bank.Loans.Application.Queries;
+global using Bank.Loans.Domain.Entities;
+global using Bank.Loans.Domain.Enums;
+global using Bank.Loans.Infrastructure;
+global using Bank.Loans.Presentation.Requests;
+global using Bank.Loans.Presentation.Responses;
+global using FluentValidation;
+global using MediatR;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Routing;
+global using Microsoft.Extensions.DependencyInjection;

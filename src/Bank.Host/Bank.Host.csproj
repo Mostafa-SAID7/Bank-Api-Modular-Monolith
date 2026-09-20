@@ -37,5 +37,6 @@
     <ProjectReference Include="..\Modules\CoreBanking\Bank.CoreBanking.Presentation\Bank.CoreBanking.Presentation.csproj" />
     <ProjectReference Include="..\Modules\Deposits\Bank.Deposits.Presentation\Bank.Deposits.Presentation.csproj" />
     <ProjectReference Include="..\Modules\Identity\Bank.Identity.Presentation\Bank.Identity.Presentation.csproj" />
+    <ProjectReference Include="..\Modules\Loans\Bank.Loans.Presentation\Bank.Loans.Presentation.csproj" />
   </ItemGroup>
 </Project>
