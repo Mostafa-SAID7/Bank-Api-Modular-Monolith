@@ -1,13 +1,16 @@
 namespace Bank.Deposits.Domain.Enums;
 
 /// <summary>
-/// Method for calculating deposit interest
+/// Represents the method used to calculate interest on a fixed deposit
 /// </summary>
 public enum InterestCalculationMethod
 {
-    /// <summary>Simple interest calculation (principal * rate * time)</summary>
-    Simple = 0,
+    /// <summary>Simple interest: Principal × Rate × Time</summary>
+    Simple = 1,
 
-    /// <summary>Compound interest calculation</summary>
-    Compound = 1
+    /// <summary>Compound interest calculated daily</summary>
+    CompoundDaily = 2,
+
+    /// <summary>Compound interest calculated monthly</summary>
+    CompoundMonthly = 3,
 }

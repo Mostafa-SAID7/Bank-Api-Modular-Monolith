@@ -1,3 +1,9 @@
-global using Bank.BuildingBlocks.Application.Messaging;
+global using Bank.Deposits.Application.Commands;
+global using Bank.Deposits.Application.DTOs;
+global using Bank.Deposits.Application.Handlers;
+global using Bank.Deposits.Application.Interfaces;
+global using Bank.Deposits.Application.Queries;
 global using Bank.Deposits.Domain.Entities;
 global using Bank.Deposits.Domain.Enums;
+global using Bank.Deposits.Domain.Events;
+global using MediatR;

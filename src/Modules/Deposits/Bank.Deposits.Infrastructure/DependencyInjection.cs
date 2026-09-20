@@ -33,10 +33,15 @@ public static class DependencyInjection
         services.AddScoped<IDepositRepository, DepositRepository>();
         services.AddScoped<IDepositTypeRepository, DepositTypeRepository>();
         services.AddScoped<IInterestRateRepository, InterestRateRepository>();
+        services.AddScoped<IFixedDepositRepository, FixedDepositRepository>();
+        services.AddScoped<IDepositProductRepository, DepositProductRepository>();
+        services.AddScoped<IMaturityNoticeRepository, MaturityNoticeRepository>();
 
         // Register services
         services.AddScoped<IAccountNumberGenerator, AccountNumberGenerator>();
         services.AddScoped<IInterestCalculationService, InterestCalculationService>();
+        services.AddScoped<IFixedDepositNumberGenerator, FixedDepositNumberGenerator>();
+        services.AddScoped<IMaturityProcessingService, MaturityProcessingService>();
 
         return services;
     }

@@ -1,5 +1,7 @@
 global using Bank.Deposits.Application;
 global using Bank.Deposits.Application.Commands;
+global using Bank.Deposits.Application.Handlers;
+global using Bank.Deposits.Application.Interfaces;
 global using Bank.Deposits.Application.Queries;
 global using Bank.Deposits.Domain.Entities;
 global using Bank.Deposits.Domain.Enums;
@@ -9,4 +11,6 @@ global using Bank.Deposits.Presentation;
 global using FluentAssertions;
 global using MediatR;
 global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.DependencyInjection;
+global using Moq;
 global using Xunit;

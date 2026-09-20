@@ -10,6 +10,10 @@ public sealed class DepositsDbContext : DbContext
     public DbSet<Deposit> Deposits => Set<Deposit>();
     public DbSet<DepositType> DepositTypes => Set<DepositType>();
     public DbSet<InterestRate> InterestRates => Set<InterestRate>();
+    public DbSet<FixedDeposit> FixedDeposits => Set<FixedDeposit>();
+    public DbSet<DepositProduct> DepositProducts => Set<DepositProduct>();
+    public DbSet<DepositTransaction> DepositTransactions => Set<DepositTransaction>();
+    public DbSet<MaturityNotice> MaturityNotices => Set<MaturityNotice>();
 
     public DepositsDbContext(DbContextOptions<DepositsDbContext> options)
         : base(options)
@@ -204,5 +208,17 @@ public sealed class DepositsDbContext : DbContext
             entity.HasIndex(ir => ir.EffectiveFromUtc);
             entity.HasIndex(ir => ir.IsActive);
         });
+
+        // Apply FixedDeposit configuration
+        modelBuilder.ApplyConfiguration(new FixedDepositConfiguration());
+
+        // Apply DepositProduct configuration
+        modelBuilder.ApplyConfiguration(new DepositProductConfiguration());
+
+        // Apply DepositTransaction configuration
+        modelBuilder.ApplyConfiguration(new DepositTransactionConfiguration());
+
+        // Apply MaturityNotice configuration
+        modelBuilder.ApplyConfiguration(new MaturityNoticeConfiguration());
     }
 }
