@@ -33,7 +33,7 @@ WORKDIR /src/Bank.Host
 RUN dotnet publish Bank.Host.csproj -c Release -o /app/publish /p:UseAppHost=false
 
 # Stage 3: Runtime (minimal image)
-FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS runtime
 WORKDIR /app
 
 # Install curl for health checks only
